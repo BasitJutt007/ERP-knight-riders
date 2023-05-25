@@ -34,6 +34,7 @@ public class CustomerShippingController {
      * @param customerShippingDto customer to be created
      * @return response 201
      */
+    // This function creates a new customer using the provided details, and returns an HTTP response with status 201 and the created customer data.
     @PutMapping
     public ResponseEntity<?> createCustomer(@RequestBody CustomerShippingDto customerShippingDto){
         return new ResponseEntity<>(customerShippingService.createCustomer(customerShippingDto), HttpStatus.CREATED);
@@ -44,6 +45,7 @@ public class CustomerShippingController {
      * @param customerShippingDto customer to be updated
      * @return response 200
      */
+    
     @PostMapping
     public ResponseEntity<?> updateCustomer(@RequestBody CustomerShippingDto customerShippingDto){
         System.out.println("update customer");
